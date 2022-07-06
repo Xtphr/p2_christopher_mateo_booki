@@ -1,0 +1,685 @@
+/* STYLE CSS - DESKTOP [+ 992px] : (Ligne 1 à 510) ET TABLETTE [769px-992px] : (Ligne 510 à 685)
+
+
+/*Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+font-family: "Raleway", Verdana, Arial, Sans-Serif;
+box-sizing: border-box;
+}
+
+/* Paramètres généraux : police et espacements */
+
+main{
+	margin: 0 40px;
+}
+
+h1{
+	font-size: 22px;
+}
+
+h2{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+p, li{
+	font-size: 18px;
+}
+
+article p, aside p{
+	font-size: 12px;
+}
+
+	a:hover, a:active, a:focus{
+  		color: #0065FC;
+	}
+
+/* Header */
+
+header{
+	margin-bottom: 30px;
+	padding: 0 20px;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Logo */
+nav img{ 
+	height: 70px;
+	padding: 30px 0 0 20px;	
+}
+
+
+/* Bordure horizontale au-dessus du menu */ 
+	nav ul{ 
+		margin: 0;
+		padding: 0;	
+		display: flex;
+		list-style-type: none;
+	}
+
+	nav li{
+		padding: 50px 20px 0 20px;
+		border-top: 2px #FFFFFF solid;
+		cursor: pointer;
+	}
+
+	nav li a{ 
+		padding-top: 50px;
+	}
+
+	nav li:hover{
+ 	   border-top: 2px #0065FC solid;
+ 	   color: #0065FC;
+	}
+
+
+/* Premier bloc : Recherche + Filtres */
+
+section{
+	margin-bottom: 40px;
+}
+
+/* Barre de recherche */
+
+	form{
+		width: 100%;
+		height: 50px;
+		margin: 0;
+		display: flex;
+	}
+
+	#recherche-mobile{ /* Barre de recherche version mobile */
+		display: none;
+	}
+
+	label{ /* Picto localisation */
+		width: 50px;
+		height: 100%;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #F2F2F2;
+		border: 1px solid #F2F2F2;
+		border-radius: 15px 0 0px 15px;
+	}
+
+	/* Zone de saisie */
+
+		input[type="text"]{ 
+			width: 220px;
+			height: 100%;
+			padding-left: 20px;
+			font-size: 16px;
+			font-weight: bolder;
+			color: #000000;
+			background-color: #FFFFFF;
+			border: 1px solid #F2F2F2;
+		}
+
+		input::placeholder{ /* Texte d'affichage */
+			color: #000000;
+			opacity: 1;
+		}
+
+		input:focus{
+			border: 1px solid #F2F2F2;
+			outline: none;
+		}
+
+	/* Bouton de recherche */
+
+		#recherche-desktop{
+			width: 120px;
+			height: 100%;
+			font-size: 14px;
+			font-weight: bold;
+			color: #FFFFFF;
+			background-color: #0065FC;
+			border: 1px solid #0065FC;
+			border-radius: 0 15px 15px 0;
+			cursor: pointer;
+		}
+
+/* Filtres */
+
+	/* Bloc des filtres */
+	.filtres{
+		width: 100%;
+		height: auto;
+		margin: 30px 0;
+		font-weight: bold;	
+		display: flex;
+		flex-wrap: wrap;	
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	/* Elements des filtres */
+	.filtres-items{
+		height: 45px;
+		margin: 10px;	
+		font-size: 16px;	
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 2px solid #F2F2F2;
+		border-radius: 40px;
+	}
+
+	.filtres-items p{
+		padding: 0 20px 0 15px;
+	}
+
+	/* Effet des filtres au survol */
+	.filtres-items:hover{
+		flex-direction: row-reverse;
+		color: #0065FC;
+		background-color: #DEEBFF;
+		cursor: pointer;
+	}
+
+	/* Pictogrammes des filtres */
+	.filtres-picto{
+		height: 45px;
+		width: 45px;
+		margin-left: -2px;	
+		font-size: 18px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #0065FC;
+		background-color: #DEEBFF;
+		border: 4px solid #DEEBFF;
+		border-radius: 45px;
+	}
+
+/* Phrase informative sous les filtres*/
+#info-picto{
+	margin-right: 10px;
+	padding: 3px 6px 3px 6px;	
+	font-size: 13px;
+	font-weight: bold;
+	color: #0065FC;
+	border: 2px solid #F2F2F2;
+	border-radius: 50px;
+}
+
+
+#saut{ /* Saut de ligne entre "filtres" et les éléments */
+	margin-right: 10px;
+}
+
+/* Bloc article + aside */
+
+.conteneur{
+	height: auto;
+	margin: 20px 0 20px 0;	
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Bloc article : Tous les hébergements */
+
+article{
+	width: 65%;
+	padding: 10px 0;
+	background-color: #F2F2F2;
+	border-radius: 15px;
+}
+
+	.wrapper-all { /* Conteneur des cards "tous les hébergements" */
+		display: flex;
+		flex-wrap: wrap;	
+		justify-content: space-around;
+	}
+
+	#hebergements{ /* Titre du bloc */
+		margin: 0;
+		padding: 20px 0 0 30px;
+	}
+
+	#afficher-plus{ /* Bouton "afficher plus" */
+		margin: 0;	
+		padding: 15px 0 15px 25px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.card{ /* Modèle de card pour les hébergments */
+		height: auto;	
+		margin: 15px 10px;
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 29%;
+		overflow: hidden;
+		background-color: #FFFFFF;
+		border: 4px solid #FFFFFF;
+		border-radius: 15px;	
+		box-shadow: 0px 0px 15px #D3D3D3;
+	}
+
+	.card img{ /* Image mise en avant */
+		width: 100%;
+		height: 100px;
+		border-radius: 15px 15px 0 0;
+		object-fit: cover;
+	}
+
+	.container{ /* Sous-conteneur avec Titre + Tarif + Notation */
+		width: 100%;
+	}
+
+	.container h3, .container p{
+		margin: 5px 0 5px 5px;
+		padding-top: 2px;
+	}
+	.container i{
+		color: #0065FC;
+		font-size: 11px;
+	}
+
+	/* Notation étoiles grisées*/
+
+	.grey-star i{
+		color: #D3D3D3;
+	}
+
+/* Bloc aside : Hébergements populaires */
+
+aside{
+	width: 30%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #F2F2F2;
+	border-radius: 15px;
+}
+
+aside h2{
+	padding: 5px 0 5px 20px;
+}
+
+	#pop-titre{ /* Div du Titre + Etoile */
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	#pop-titre h2{ /* Titre h2 du bloc hébergements populaires */
+		margin: 0;
+		padding: 20px 0 0 20px;
+	}
+
+	#pop-star{ /* Etoile du titre */
+		margin: 0;
+		padding: 5px 25px 5px 0;
+		font-size: 18px;	
+		display: inline-block;
+	}
+
+	.wrapper-pop{ /* Conteneur des cards pour les hébergements populaires*/
+		width: 85%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.wrapper-pop a{ /* Cards cliquables */
+		width: 100%;
+		height: 100%;
+		min-height: 120px;
+	}
+
+	.pop-card{ /* Modèle de card pour les hébergements populaires */
+		height: 100%;
+		max-height: 150px;
+		width: 100%;
+		margin: 15px 0 15px 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;	
+		background-color: #FFFFFF;
+		border: 4px solid #FFFFFF;
+		border-radius: 15px;	
+		box-shadow: 0px 0px 15px #D3D3D3;
+	}
+
+	.pop-card img{ /* Image mise en avant */
+		width: 40%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border-radius: 15px 0 0 15px;
+		object-fit: cover;
+	}
+
+	.pop-container{ /* Conteneur du titre + tarif + notation */
+		height: 100%;
+		width: 60%;
+		padding-left: 10px;	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+
+	.pop-container h3{
+		margin: 10px 0 0 0;
+	}
+	.pop-container p{
+		margin: 5px 0;
+		padding-top: 2px;
+	}
+
+	.pop-container i{
+		padding: 20px 0 10px 0;
+		font-size: 10px;
+		color: #0065FC;
+	}
+
+/* Notation étoiles grisées*/
+
+.pop-grey-star i{
+	color: #D3D3D3;
+}
+
+/* Bloc section Activités */
+
+.wrapper-act-mobile{ /* Bloc activités version mobile */
+	display: none;
+}
+
+.wrapper-act{ /* Conteneur des activités */
+	height: auto;
+	width: 100%;
+	margin: 20px 0 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #FFFFFF;	
+}
+
+	#activites{ /* Titre h2 du bloc activités */
+		margin-top: 50px;
+	}
+
+	.wrapper-act h3{
+		margin: 0;
+		padding: 15px;
+	}
+
+	#vieux-port, #parc-calanques{ /* Cards en orientation portrait */
+		width: 23%;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #DDDDDD;
+		border-radius: 20px;
+		box-shadow: 0 5px 10px #DDDDDD;
+	}
+
+	#vieux-port img, #parc-calanques img{
+		width: 100%;
+		height: 360px;
+		object-fit: cover;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.colonne2, .colonne4{ /* Conteneur des cards en paysage */
+		width: 23%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	#fort-pomegues img{
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+	}
+
+	#iles-frioul img{
+		width: 100%;
+		height: 100px;
+		object-fit: cover;
+	}
+
+	.colonne4 img{ /* Dimensions différentes pour la colonne 4 */
+		width: 100%;
+		height: 140px;
+		object-fit: cover;
+	}
+
+	#fort-pomegues, #iles-frioul, #notredame-garde, #parc-longchamp{
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #DDDDDD;	
+		border-radius: 20px;
+		box-shadow: 0 5px 10px #DDDDDD;
+	}
+
+	#fort-pomegues img, #iles-frioul img, #notredame-garde img, #parc-longchamp img{
+		border-radius: 20px 20px 0 0;
+	}
+
+/* Footer */
+
+footer{
+	height: 200px;
+	padding-left: 50px;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	background-color: #F2F2F2;
+}
+
+.footer-items{
+	width: 60%;
+}
+
+footer ul{
+	padding-left: 0;
+	list-style-type: none;
+}
+
+footer li{
+	padding-bottom: 10px;
+}
+
+/* RESPONSIVE DESIGN - TABLETTES */
+
+@media all and (min-width: 769px) and (max-width: 992px){ /* Responsive pour écrans entre 769px et 992px */
+	
+	/* Menu de navigation */
+
+	nav{
+		margin-bottom: 40px;
+	}
+
+	nav img{
+		height: 100px;
+	}
+
+	nav ul{
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	nav li{
+		padding-right: 20px;
+		padding-bottom: 10px;
+		border-top: none;
+		border-right: 10px solid #F2F2F2;
+	}
+
+		nav li:hover{
+			border-top: none;
+			border-right: 10px solid #0065FC;
+		}
+
+	h1, h1+p{
+		text-align: center;
+	}
+
+	/* Barre de recherche */
+
+	form{
+		margin-top: 50px;
+		justify-content: center;
+	}
+
+	/* Filtres */
+
+	#saut{ /* Saut de ligne sous le mot "filtre"*/
+		display: none;
+	}
+
+	.filtres{ /* Conteneur des filtres */
+		justify-content: center;
+	}
+
+	/* Bloc Article + Aside */
+
+	.conteneur{
+		flex-direction: column;
+	}
+
+	/* Bloc Article "Tous les hébergements" */
+
+	article{
+		width: 100%;
+		margin: 20px 10px;
+	}
+
+		.card{ /* Modèle de card pour tous les hébergements */
+			width: 50%;
+		}
+
+		#hebergements/* Titre h2 bloc hébergements */, #afficher-plus/* Bouton afficher plus*/{
+			margin: 5px 0 10px 0;
+			padding-left: 0;	
+			text-align: center;
+		}
+
+	/* Bloc Aside Populaires */
+
+	aside{
+		width: 100%;
+		height: 100%;
+		margin: 20px 10px;
+	}
+
+		.wrapper-pop{ /* Conteneur des hébergements populaires */
+			width: 100%;
+			height: 100%;
+			margin: 20px 0;	
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.wrapper-pop a{ /* Card cliquable */
+			width: 200px;		
+			height: 100%;
+		}
+
+		.pop-card{ /* Modèle de card pour les hébergements populaires */
+			width: 200px;
+			height: 100%;
+			max-height: 300px;
+			min-height: 300px;
+			flex-direction: column;
+			border-radius: 30px 0 30px 0;
+			border: none;
+		}
+
+		.pop-card img{ /* Image de la card */
+			width: 100%;
+			min-height: 150px;
+			max-height: 150px;
+			border-radius: 30px 0 0 0;
+			border: none;
+		}
+
+		.pop-container{ /* Titre et description de la card */
+			width: 100%;
+			min-height: 150px;
+			max-height: 150px;
+		}
+
+	/* Bloc section Activités */
+
+	.wrapper-act{ /* Conteneur des cards activités sur desktop */
+		display: none;
+	}
+
+	.wrapper-act-mobile{ /* Conteneur des cards activités sur mobile */
+		padding: 0 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+		.activites-mobile{ /* Cards des activités sur mobile */
+			width: 100%;
+			height: 230px;
+			margin: 10px 0;
+			border: 1px solid #DDDDDD;		
+			border-radius: 20px;
+			box-shadow: 0 5px 10px #DDDDDD;
+		}
+
+		.activites-mobile img{ /* Image des activités sur mobile */
+			width: 100%;
+			min-width: 410px;
+			height: 160px;
+			object-fit: cover;
+			border-radius: 20px 20px 0 0;
+		}
+
+		.activites-mobile h3{ 
+			padding-left: 20px;
+		}
+
+		#activites{ /* Titre h2 du bloc activités */
+			padding-left: 30px;
+		}
+
+	/* Footer */
+
+	footer{
+		height: 600px;		
+		margin: 0;
+		padding: 50px 20px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-items{
+		margin: 0;
+		text-align: center;
+	}
+}

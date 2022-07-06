@@ -1,0 +1,300 @@
+/* RESPONSIVE DESIGN - MOBILE <768px */ 
+
+
+/* Margin et padding de la page */
+body{
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	margin: 0 0 50px 0;
+	padding: 0;
+}
+
+/* Menu de navigation */
+
+header{
+	padding: 0;
+}
+	nav{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav ul{
+		width: 100%;
+	}
+
+	nav li a{
+		display: block;
+		padding: 30px 0 10px 0;
+	}
+
+	nav li{
+		text-align: center;
+		font-size: 20px;
+		width: 50%;
+		padding: 0;
+		border-bottom: 3px #F2F2F2 solid ;
+	}
+
+		nav li:hover{
+	  	border-bottom: 3px #0065FC solid;
+	   	border-top: none;
+	   	color: #0065FC;
+		}
+
+	nav img{
+		padding: 20px 0 0 0;
+		height: 80px;
+	}
+
+/* Font Sizes */
+
+h1{
+	font-size: 26px;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 26px;
+}
+
+h3{
+	font-size: 20px;
+}
+
+h4{
+	font-size: 22px;
+}
+
+p, li{
+	font-size: 20px;
+}
+
+article p, aside p{
+	font-size: 18px;
+}
+
+.uppercase{ /* Différence sur maquette */
+	text-transform: uppercase;
+}
+.lowercase{ /* Différence sur maquette */
+	text-transform: lowercase;
+}
+
+/* Section Premier Bloc : recherche + filtres */
+
+.premier-bloc{
+	padding: 0 10px;
+}
+
+/* Barre de recherche */
+
+	#recherche-desktop{ /* Barre de recherche version desktop */
+		display: none;
+	}
+
+	#recherche-mobile{ /* Bouton avec loupe */
+		width: 60px;
+		height: 100%;
+		margin-left: -20px;
+		display: inline-block;
+		font-size: 22px;
+		font-weight: bold;
+		color: #FFFFFF;
+		background-color: #0065FC;
+		border: 1px solid #0065FC;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+
+	input[type="text"]{ /* Zone de saisie */
+		border-right: none;
+		min-width: 260px;
+		font-size: 22px;
+		flex-grow: 1;
+	}
+
+	form{
+		margin: 30px auto 20px auto;
+		width: 90%;
+		height: 60px;
+	}
+
+	label{ /* Picto localisation */
+		width: 65px;
+		font-size: 22px;
+	}
+
+/* Filtres */
+
+	.filtres-items{ /* Elements des filtres */
+		height: 60px;
+	}
+
+	.filtres-picto{ /* Pictogrammes de filtres */
+		height: 60px;
+		width: 60px;
+	}
+
+	#saut{ /* Relatif au mot "filtres" qui précede les items */
+		width: 100%;
+	}
+
+	#info-picto{ /* Phrase d'information avec pictogramme i */
+		font-size: 18px;
+		border-radius: 60px;
+		padding: 5px 10px 5px 10px;
+	}
+
+/* Bloc Article + Aside */
+
+.conteneur{
+	flex-direction: column-reverse;
+	width: 100%;
+}
+
+/* Bloc Aside : Les hébergements Populaires */
+
+aside{
+	width: 100%;
+	padding: 0;
+	border-radius: 0;
+	padding-bottom: 40px;
+}
+
+	.pop-card{ /* Modèle de card pour les hébergements populaires */
+		height: 180px;
+		width: 100%;
+		min-width: 410px;
+		border: 6px solid #FFFFFF;
+		border-radius: 20px;
+		margin: 10px 0;
+	}
+
+	.pop-card img{ /* Image mise en avant */
+		min-width: 160px;
+		width: 40%;
+		border-radius: 20px 0 0 20px;
+	}
+
+	.pop-container{ /* Conteneur avec titre + prix + notation */
+		width: 60%;
+	}
+
+	.pop-card a{ /* Card cliquable */
+		width: 100%;
+	}
+
+	.pop-container h3{
+		max-width: 200px;
+	}
+
+	.pop-container i{ /* Pictos étoiles */
+		font-size: 14px;
+		padding: 20px 0 0 0;
+	}
+
+	#pop-titre{ /* Titre h2 + étoile du bloc populaires */
+		margin: 30px 0 20px 0;
+	}
+
+	#pop-star{ /* Picto étoile du titre */
+		font-size: 26px;
+	}
+
+
+/* Bloc Article "Tous les hébergements" */
+
+article{
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+	.wrapper-all{ /* Conteneur des cards de tous les hébergements */
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.card{ /* Modèle de card pour tous les hébergements */
+		width: 100%;
+		min-width: 410px;
+		height: 250px;
+		margin: 15px 0;
+	}
+
+	.card img{ /* Image mise en avant */
+		width: 100%;
+		height: 140px;
+	}
+
+	.container{ /* Conteneur du titre + tarifs + notation */
+		width: 100%;
+		height: 110px;
+	}
+
+	.container i{ /* Notation étoiles */
+		font-size: 14px;
+		padding: 5px 0 0 0;
+	}
+
+	#afficher-plus{ /* Bouton afficher plus */
+		font-size: 22px;
+	}
+
+/* Bloc section Activités */
+
+.wrapper-act{ /* Conteneur des cards activités sur desktop */
+	display: none;
+}
+
+.wrapper-act-mobile{ /* Conteneur des cards activités sur mobile */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 5px;
+}
+
+	.activites-mobile{ /* Modèle de cards pour les activités */
+		width: 100%;
+		height: 230px;
+		border-radius: 20px;
+		box-shadow: 0 5px 20px #DDDDDD;
+		border: 1px solid #DDDDDD;
+		margin: 10px 0;
+	}
+
+	.activites-mobile img{ /* Image mise en avant */
+		width: 100%;
+		min-width: 410px;
+		height: 160px;
+		object-fit: cover;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.activites-mobile h3{ /* Titre h3 des cards activités */
+		padding-left: 20px;
+	}
+
+	#activites{ /* Titre h2 du bloc activités */
+		padding-left: 30px;
+	}
+
+/* Footer */
+
+footer{
+	margin: 0;
+	padding: 50px 20px;
+	height: 600px;
+	flex-direction: column;
+}
+
+.footer-items{
+	margin: 0;
+	width: 100%;
+}
